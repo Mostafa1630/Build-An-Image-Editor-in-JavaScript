@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+body{
+  min-height: 100vh;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #E3F2FD;
+}
+.container{
+  width: 850px;
+  background: #fff;
+  padding: 30px 35px 35px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+.container.disable :where(.editor-panel, .reset-filter, .save-image){
+  opacity: 0.6;
+  pointer-events: none;
+}
+.container h2{
+  font-size: 22px;
+  font-weight: 500;
+}
+.container .warpper{
+  display: flex;
+  margin: 20px 0;
+  min-height: 335px;
+}
+.container .warpper .editor-panel{
+  width: 250px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.container .warpper .editor-panel .title{
+  display: block;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.container .warpper .editor-panel .options,
+.container .controls{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container .warpper .editor-panel .options button{
+  height: 40px;
+  font-size: 14px;
+  color: #6C757D;
+  margin-bottom: 8px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+}
+.container .warpper .editor-panel .options button:hover{
+  background-color: #f5f5f5;
+  color: #6C757D;
+}
+.editor-panel .filter .options button{
+  width: calc(100%/2 - 4px);
+}
+.editor-panel .filter .options button.active{
+  color: #fff;
+  background-color: #5372F0;
+  border-color: #5372F0;
+}
+.container .warpper .editor-panel .silder{
+  margin-top: 12px;
+}
+.container .warpper .editor-panel .silder .filter-info{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #464646;
+}
+.container .warpper .editor-panel .silder input{
+  width: 100%;
+  height: 5px;
+  accent-color:#5372F0 ;
+}
+.container .warpper .editor-panel .rotate{
+  margin-top: 17px;
+}
+.editor-panel .rotate .options button{
+  width: calc(100%/4 - 3px);
+}
+.container .warpper .editor-panel .rotate button:nth-child(3),
+.container .warpper .editor-panel .rotate button:nth-child(4){
+  font-size: 18px;
+}
+.container .warpper .preview-image{
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+.container .warpper .preview-image img{
+  max-width: 490px;
+  max-height: 335px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.container .controls button{
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 11px 20px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.container .controls .reset-filter{
+  color: #6C757D;
+  border: 1px solid #6C757D;
+}
+.container .controls .choose-image{
+  color: #fff;
+  background-color: #6C757D;
+  border: 1px solid #6C757D;
+}
+.container .controls .save-image{
+  margin-left: 5px;
+  color: #fff;
+  background-color: #5372F0;
+  border: 1px solid #5372F0;
+}
+
+/* media queries */
+@media screen and (max-width: 760px) {
+  .container{
+    padding: 25px;
+  }
+  .container .warpper{
+    flex-wrap: wrap-reverse;
+  }
+  .warpper .editor-panel{
+    width: 100%;
+  }
+  .warpper .preview-image{
+    width: 100%;
+    margin: 0 0 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .controls button{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .controls .row{
+    width: 100%;
+  }
+  .controls .row .save-image{
+    margin-left: 0px;
+  }
+}
+
+
+
+
+
